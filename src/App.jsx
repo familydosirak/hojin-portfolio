@@ -95,7 +95,7 @@ const projects = [
     summary:
       "공공데이터 포털의 날씨·재난 API, 센서·스위치·CCTV 데이터, 실시간 중계 연계를 활용해 관제 대시보드를 제작했습니다.",
     overview:
-      "공공데이터 포털의 날씨 API와 재난 API, 센서·스위치·CCTV 데이터, 실시간 중계 연계를 활용한 관제 대시보드 제작에 참여했습니다. 여러 종류의 데이터를 한 화면에서 확인할 수 있도록 구성하고, 관제 상황에서 필요한 정보를 시각적으로 확인할 수 있는 화면을 개발했습니다.",
+      "공공데이터 포털의 날씨 API와 재난 API, 센서·스위치·CCTV 데이터, 실시간 중계 연계를 활용한 관제 대시보드 제작에 참여했습니다. 여러 종류의 데이터를 한 화면에서 확인할 수 있도록 구성하고, 관제 상황에서 필요한 정보를 시각적으로 확인할 수 있는 화면을 개발했습니다. 또한 재난 상황시 좌표 정보를 지도 위에 표시하는 기능도 함께 구현했습니다.",
     role: [
       "공공데이터 포털 날씨 API 연계",
       "재난 관련 API 데이터 활용",
@@ -128,7 +128,7 @@ const projects = [
     summary:
       "참가자 확인, 닉네임 설정, 단계별 문제 풀이, 정답 검증 API, 진행 상태 저장, 관리자 통계 페이지까지 직접 구현한 웹 기반 방탈출 게임 사이트입니다.",
     overview:
-      "멘사코리아 연말파티 행사에서 사용할 수 있는 웹 기반 방탈출 게임 사이트를 제작했습니다. 참가자는 참가자 확인과 닉네임 설정을 거쳐 게임을 시작하고, 단계별 문제를 풀며 다음 스테이지로 이동합니다. 관리자는 별도 관리자 페이지에서 참가자 진행 현황과 통계를 확인할 수 있도록 구성했습니다.",
+      "멘사코리아 연말파티 행사에서 사용할 수 있는 웹 기반 방탈출 게임 사이트를 제작했습니다. 참가자는 참가자 확인과 닉네임 설정을 거쳐 게임을 시작하고, 단계별 문제를 풀며 다음 스테이지로 이동합니다. 관리자는 별도 관리자 페이지에서 참가자 진행 현황과 통계를 확인할 수 있도록 구성했습니다. 사이트는 재활용 할 수 있게 문제만 수정하거나 추가 할 수 있도록 제작했습니다.",
     role: [
       "Firebase Hosting 기반 웹사이트 배포",
       "Cloud Functions 기반 문제 조회 및 정답 검증 API 구성",
@@ -137,6 +137,7 @@ const projects = [
       "오답 시 재시도 쿨타임 기능 구현",
       "참가자 확인 및 닉네임 설정 흐름 구현",
       "관리자 통계 페이지 및 진행 현황 확인 기능 구현",
+      "다양한 문제를 포함한 단계별 게임 흐름 설계 및 구현",
     ],
     features: [
       "참가자 확인 후 게임 진입",
@@ -541,12 +542,9 @@ export default function App() {
       <section id="home" className="relative mx-auto flex min-h-[88vh] max-w-6xl items-center px-5 py-20">
         <div className="grid w-full items-center gap-12 md:grid-cols-[1.1fr_0.9fr]">
           <motion.div initial={{ opacity: 0, y: 26 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
-            <p className={theme.heroBadge}>Java/Spring · Frontend · 운영 유지보수 · Firebase</p>
 
             <h1 className={theme.heroTitle}>
-              고객 요구사항을
-              <br />
-              <span className={theme.gradientText}>실제 서비스 기능으로 구현하는</span>
+              안녕하세요
               <br />
               개발자 정호진입니다.
             </h1>
@@ -586,8 +584,6 @@ export default function App() {
                   <p><span className="text-cyan-500">const</span> developer = {"{"}</p>
                   <p className="pl-4"><span className="text-indigo-500">name</span>: "정호진",</p>
                   <p className="pl-4"><span className="text-indigo-500">experience</span>: "2년 9개월",</p>
-                  <p className="pl-4"><span className="text-indigo-500">focus</span>: "솔루션 커스터마이징 · 운영 대응",</p>
-                  <p className="pl-4"><span className="text-indigo-500">projects</span>: ["영상반출", "CCTV", "관제", "방탈출", "팀메이커"],</p>
                   <p className="pl-4"><span className="text-indigo-500">phone</span>: "010-9491-2332",</p>
                   <p className="pl-4"><span className="text-indigo-500">email</span>: "familydosirak@gmail.com",</p>
                   <p className="pl-4"><span className="text-indigo-500">github</span>: "github.com/familydosirak",</p>
@@ -661,8 +657,6 @@ export default function App() {
       <section id="skills" className="relative mx-auto max-w-6xl px-5 py-20">
         <SectionTitle
           eyebrow="Skills"
-          title="기술명보다 실제 사용 경험을 중심으로 정리했습니다"
-          description="단순한 기술 나열이 아니라, 각 기술을 어떤 업무와 프로젝트에서 사용했는지 보여주는 방향으로 구성했습니다."
           theme={theme}
         />
 
@@ -701,7 +695,7 @@ export default function App() {
       <section id="projects" className="relative mx-auto max-w-6xl px-5 py-20">
         <SectionTitle
           eyebrow="Projects"
-          title="실무 경험과 개인 프로젝트를 함께 보여줍니다"
+          title="프로젝트"
           description="회사 프로젝트는 고객 요구사항 반영과 운영 대응 경험을, 개인 프로젝트는 직접 기획·개발·배포한 구현 경험을 중심으로 정리했습니다."
           theme={theme}
         />
@@ -771,12 +765,6 @@ export default function App() {
       <section id="contact" className="relative mx-auto max-w-6xl px-5 py-24">
         <div className={theme.contactBox}>
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-cyan-500">Contact</p>
-          <h2 className={theme.contactTitle}>실제 사용되는 서비스를 만드는 개발자가 되겠습니다.</h2>
-          <p className={theme.contactText}>
-            고객 요구사항을 서비스 기능으로 구체화하고, 운영 환경에서 발생하는 문제를 확인하며 개선하는 개발자가 되고자 합니다.
-            아래 연락처와 링크를 통해 제 프로젝트와 개발 기록을 확인하실 수 있습니다.
-          </p>
-
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a className={theme.primaryButton} href="mailto:familydosirak@gmail.com">
               <Mail size={18} /> familydosirak@gmail.com
