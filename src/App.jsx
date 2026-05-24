@@ -550,8 +550,10 @@ export default function App() {
             </h1>
 
             <p className={theme.heroDesc}>
-              기존 솔루션을 고객 환경에 맞게 커스터마이징하고, 운영 중 발생하는 문제를 로그와 DB를 확인하며 대응해왔습니다.
-              회사 프로젝트에서는 공공기관 통합플랫폼과 영상반출시스템을 유지보수했고, 개인 프로젝트에서는 기획부터 배포와 관리자 기능까지 직접 구현했습니다.
+              <p className={theme.heroDesc}>
+                기존 솔루션을 고객 환경에 맞게 커스터마이징하고, 운영 중 발생하는 문제를 로그와 DB를 확인하며 대응해왔습니다.
+                협업 과정에서 함께 고민하며 더 나은 해결 방법을 찾아가는 것을 좋아하고, 사용자가 실제로 서비스를 이용하는 흐름과 경험을 중요하게 생각합니다.
+              </p>
             </p>
 
             <div className="mt-8 flex flex-wrap gap-3">
@@ -626,8 +628,7 @@ export default function App() {
       <section id="strengths" className="relative mx-auto max-w-6xl px-5 py-20">
         <SectionTitle
           eyebrow="Strengths"
-          title="제가 실제로 경험한 개발 역량입니다"
-          description="과장된 역할보다 실제로 맡았던 업무를 기준으로 정리했습니다. 고객 요구사항 반영, 운영 오류 대응, 관제 화면 개발 경험이 강점입니다."
+          title="실무 경험을 통해 쌓아온 개발 역량입니다"
           theme={theme}
         />
 
@@ -765,6 +766,11 @@ export default function App() {
       <section id="contact" className="relative mx-auto max-w-6xl px-5 py-24">
         <div className={theme.contactBox}>
           <p className="mb-3 text-sm font-bold uppercase tracking-[0.28em] text-cyan-500">Contact</p>
+          <p className={theme.contactText}>
+            저는 협업 과정에서 함께 고민하며 더 나은 해결 방법을 찾아가는 것을 좋아합니다.
+            또한 기능을 구현할 때 사용자가 실제로 서비스를 이용하는 흐름과 경험을 중요하게 생각하며, 운영 환경에서 안정적으로 사용할 수 있는 기능을 만드는 개발자를 지향합니다.
+          </p>
+
           <div className="mt-8 flex flex-wrap justify-center gap-3">
             <a className={theme.primaryButton} href="mailto:familydosirak@gmail.com">
               <Mail size={18} /> familydosirak@gmail.com
